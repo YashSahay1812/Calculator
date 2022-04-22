@@ -1,0 +1,38 @@
+/* CONTAINER */
+.container{
+    height: 550px;
+    width: fit-content;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 75px auto;
+}
+
+    /* DISPLAY */
+    .display{
+        height: 150px;
+        width: 260px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    /* CONTROLS */
+    .control{
+        display: grid;
+        grid-template-rows: repeat(5,50px);
+        grid-template-columns: repeat(4,50px);
+        grid-gap: 20px 20px;
+        border: 1px solid black;
+        width: 260px;
+        padding: 20px;
+    }
+
+        /* BUTTONS */
+        .btn{
+            border: 1px solid black;
+        }
+
+        /* for 0 only */
+        .span{
+            grid-column: 1 / 3;
+        }
