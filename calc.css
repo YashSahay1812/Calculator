@@ -2,18 +2,26 @@
 .container{
     height: 550px;
     width: fit-content;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     margin: 75px auto;
+    background-color: #1a1a1a;
+    border-radius: 25px;
+    align-items: center;
 }
 
     /* DISPLAY */
     .display{
-        height: 150px;
+        height: 140px;
         width: 260px;
         padding: 20px;
-        border: 1px solid black;
+        color: white;
+        font-size: 35px;
+        font-family: cursive;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        flex-wrap: wrap;
     }
 
     /* CONTROLS */
@@ -22,7 +30,6 @@
         grid-template-rows: repeat(5,50px);
         grid-template-columns: repeat(4,50px);
         grid-gap: 20px 20px;
-        border: 1px solid black;
         width: 260px;
         padding: 20px;
     }
@@ -30,6 +37,29 @@
         /* BUTTONS */
         .btn{
             border: 1px solid black;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333333;
+            color: white;
+            font-weight: bold;
+            font-family: cursive;
+            cursor: pointer;
+        }
+        .btn:hover{
+            box-shadow: 0 0 10px 0.5px grey;
+        }
+        .orange{
+            background-color: rgb(255, 125, 33);
+        }
+        .green{
+            background-color: #00cc00;
+        }
+        .clear{
+            color: red;
+            background-color: #330000;
+            font-family: sans-serif;
         }
 
         /* for 0 only */
