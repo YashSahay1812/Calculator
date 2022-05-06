@@ -1,5 +1,5 @@
 /* CONTAINER */
-.container{
+#container{
     height: 550px;
     width: fit-content;
     display: flex;
@@ -8,7 +8,26 @@
     background-color: #1a1a1a;
     border-radius: 25px;
     align-items: center;
+    position: relative;
+    transition: all 0.25s linear;
 }
+
+    /* NIGHT-MODE */
+    #mode{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: #333333;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s linear;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
 
     /* DISPLAY */
     .display{
@@ -36,7 +55,7 @@
 
         /* BUTTONS */
         .btn{
-            border: 1px solid black;
+            border: 1px;
             border-radius: 15px;
             display: flex;
             justify-content: center;
@@ -46,6 +65,7 @@
             font-weight: bold;
             font-family: cursive;
             cursor: pointer;
+            transition: background-color 0.25s linear;
         }
         .btn:hover{
             box-shadow: 0 0 10px 0.5px grey;

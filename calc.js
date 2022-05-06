@@ -1,6 +1,6 @@
 const display = document.getElementsByClassName('display')[0];
-const arr = document.getElementsByClassName("btn")
-for(var obj of arr){
+const btns = document.getElementsByClassName("btn")
+for(var obj of btns){
     if(!obj.classList.contains('nd')){
         obj.addEventListener('click', function(){
             if(display.innerHTML != '0') display.innerHTML += this.innerHTML;
@@ -31,3 +31,44 @@ for(var obj of arr){
         }
     }
 }
+
+// CODE FOR SHIFTING THE THEME (MODE)
+const container = document.getElementById('container');
+const mode = document.getElementById('mode');
+let isDark = true;
+mode.addEventListener('click',function(){
+    if(isDark){
+        this.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        this.style.backgroundColor = '#dbf0f9';
+        this.style.color = '#515151';
+        container.style.backgroundColor = '#f3fafd';
+        display.style.color = '#515151';
+        // for each button class object
+        for(let obj of btns){
+            if(obj.classList.contains('clear')){
+                obj.style.backgroundColor = '#ffe5e5';
+            }
+            else if(!obj.classList.contains('orange') && !obj.classList.contains('green')){
+                obj.style.backgroundColor = '#dbf0f9';
+                obj.style.color = '#515151';
+            }
+        }
+    }
+    else{
+        this.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        this.style.backgroundColor = '#333333';
+        this.style.color = 'white';
+        container.style.backgroundColor = '#1a1a1a';
+        display.style.color = 'white';
+        for(let obj of btns){
+            if(obj.classList.contains('clear')){
+                obj.style.backgroundColor = '#330000';
+            }
+            else if(!obj.classList.contains('orange') && !obj.classList.contains('green')){
+                obj.style.backgroundColor = '#333333';
+                obj.style.color = 'white';
+            }
+        }
+    }
+    isDark = !isDark;
+})
