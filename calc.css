@@ -119,6 +119,7 @@
             flex-direction: column-reverse;
             align-items: flex-end;
             flex-wrap: wrap;
+            overflow: hidden;
         }
 
         /* CONTROLS */
